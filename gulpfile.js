@@ -4,7 +4,8 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
 gulp.task('concatenation', function() {
-   return gulp.src(['src/frontend/scripts/app.js'])
+   return gulp.src(['src/frontend/scripts/domManipulation.js',
+                    'src/frontend/scripts/app.js'])
     .pipe(concat('app.js'))
     .pipe(gulp.dest('src/frontend/')); 
 });
